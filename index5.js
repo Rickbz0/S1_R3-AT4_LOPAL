@@ -2,15 +2,15 @@ let saldo = 1000; // Saldo inicial
 let saque;
 
 while (saldo > 0) {
-  saque = parseFloat(prompt(`Seu saldo atual é R$ ${saldo.toFixed(2)}. Digite o valor do saque:`));
+  saque = parseFloat(prompt(`seu saldo atual é R$ ${saldo.toFixed(2)} digite o valor do saque:`));
   if (isNaN(saque) || saque <= 0) {
-    alert("Valor invalido. Digite um numero positivo.");
+    alert("valor invalido. digite um numero positivo");
   } else if (saque > saldo) {
-    alert("Saldo insuficiente. Tente um valor menor.");
+    alert("saldo insuficiente. tente um valor menor");
   } else {
-    saldo -= saque;
-    alert(`Saque de R$ ${saque.toFixed(2)} realizado com sucesso. Saldo restante: R$ ${saldo.toFixed(2)}`);
+    saldo = (saldo - saque);
+    alert(`saque de R$ ${saque.toFixed(2)} realizado com sucesso, saldo restante: R$ ${saldo.toFixed(2)}`);
   }
 }
 
-alert("Saldo esgotado. Operaçoes encerradas.");
+alert("saldo esgotado");
